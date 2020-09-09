@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { TodoListItem } from '../../Components/TodoItem';
 
-const todos:Todo[]=[
+const initialTodos:Todo[]=[
     {
         text:"Learn js",
         complete:true
@@ -13,11 +13,25 @@ const todos:Todo[]=[
 ]
 
 function TodoList(){
+    const[todos,setTodos] = useState(initialTodos);
+
+    const handleTodo = (selectedTodo:Todo)=>{
+        const newTodo = todos.map(todo=>{
+            if(todo === selectedTodo){
+                return{
+                    ...todo,
+                    complete:!todo.complete,
+                };
+            }
+            return todo;
+        });
+        setTodos(newTodo);
+    }
     return(
-        <>
-            <TodoListItem todo={todos[0]}/>
-            <TodoListItem todo={todos[1]}/>
-        </>
+        <ul>
+            <TodoListItem todo={todos[0]} handleTodo={handleTodo}/>
+            <TodoListItem todo={todos[1]} handleTodo={handleTodo}/>
+        </ul>
     )
 }
 
