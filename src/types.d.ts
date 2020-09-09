@@ -4,3 +4,4 @@ interface Todo {
 }
 
 type handleTodo = (selectedTodo: Todo) => void;
+type AddTodo = (text:string) => void;

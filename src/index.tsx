@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import TodoList from './Pages/TodoList';
+import Main from './Pages/Main';
 
 
 
 ReactDOM.render(
   <React.StrictMode>
-    <TodoList/>
+    <Main/>
   </React.StrictMode>,
   document.getElementById('root')
 );
