@@ -1,0 +1,19 @@
+#todo-list {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000000;
+    background-color: #EEEEEE;
+}
+
+#todo-list #todo-list-content h1 {
+    font-weight: 700;
+    text-align: center;
+}
+
+#todo-list #todo-list-content ul {
+    text-decoration: none;
+    list-style-type: none;
+}

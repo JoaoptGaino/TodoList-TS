@@ -8,7 +8,7 @@ interface Props {
 export const TodoListItem: React.FC<Props> = ({ todo,handleTodo }) => {
     return (
         <li>
-            <label style={{ textDecoration: todo.complete ? 'line-through' : undefined }}>
+            <label className={todo.complete ? 'complete':''}>
                 <input
                     type="checkbox"
                     checked={todo.complete}
